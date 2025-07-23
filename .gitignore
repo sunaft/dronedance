@@ -1,0 +1,15 @@
+.DS_Store
+local.properties 
+*.iml
+.gradle/
+build/
+app/build/
+.idea/
+*.log
+app/.cxx/
+app/.gradle/
+app/release.keystore
+app/src/.DS_Store
+openCVLibrary/
+android-sdk-v5-uxsdk/
+app/opencv/
