@@ -7,7 +7,7 @@ Limited range - the mat must always remain visible to the drone's downward-facin
 
 ## Localization mat
 
-See floor/floor_new_merged.png
+See [floor/floor_new_merged.png](https://kempelen.dai.fmph.uniba.sk/files/floor/)
 
 There is also a version split into 2 parts which are easier to print, handle and store, 
 but must be aligned properly - usual transparent tape is ok.
@@ -186,7 +186,7 @@ To go back to the debug version, undo the steps above.
 
 App's icon credits:
 
-<a href="https://www.vectorstock.com/royalty-free-vector/decorative-folk-bird-on-blooming-tree-branch-vector-52826783">Vector image by VectorStock / Nasturzia</a>
+[Vector image by VectorStock / Nasturzia](https://www.vectorstock.com/royalty-free-vector/decorative-folk-bird-on-blooming-tree-branch-vector-52826783)
 
 This software was created by transforming one of the original DJI MSDK v5 samples, some remaining unneeded files (in resources) are still there.
 It was created with a great help and endless patience of ChatGPT - big thanks!
