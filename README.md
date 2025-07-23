@@ -164,7 +164,7 @@ will already be even faster.
     adb push dance_K.txt /data/local/tmp/   (for K being that drone ID 1..6)
     adb shell "run-as sk.uniba.krucena cp /data/local/tmp/config.txt files/"
     adb shell "run-as sk.uniba.krucena cp /data/local/tmp/dance_K.txt files/"
-	```
+```
 8. now we need to build the real release, but for that:
      in Krucena - app - build.graddle, change debuggable to false
 9. rebuild the project again, also build APKs
