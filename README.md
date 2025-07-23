@@ -125,7 +125,7 @@ Copy the full contents of the android-sdk-v5-uxsdk module into the project's `an
 which you already have. We used version 5.11.
 
 
-## DJI Developer Account & API Key
+### DJI Developer Account & API Key
 
 To build and run this application, you need your own DJI API key:
 
@@ -135,6 +135,10 @@ To build and run this application, you need your own DJI API key:
 4. Put it into gradle.properties file.
 
 After doing all this, sync and build the project in Android Studio.
+
+
+### Optional: Release Version
+
 The debug version runs fast enough for most purposes and is easier to work with.
 If you desire to build a release version, you can try, but be ready for a lot of trouble...:
 
