@@ -1,0 +1,29 @@
+The four demo dances have the following starting
+positions:
+
+
+prokofjev:
+
+6>   5v
+
+2^   1<
+
+krucena:
+
+   6<
+2v    5^
+   1>
+
+perinbaba:
+
+   6> 
+2<    5v
+   1^
+
+neverending story:
+
+    .
+      5v  6v
+.       .  
+      1v  2v
+    . 
