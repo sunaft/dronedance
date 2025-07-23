@@ -5,6 +5,13 @@ on flight instructions specified in text files and localization mat placed on th
 It can also start synchronized music from VLC music server.
 Limited range - the mat must always remain visible to the drone's downward-facing camera
 
+## Demo videos
+
+- [some wild classics](https://kempelen.dai.fmph.uniba.sk/files/tanec1.mp4)
+- [folk music](https://kempelen.dai.fmph.uniba.sk/files/tanec2.mp4)
+- [fairy tale](https://kempelen.dai.fmph.uniba.sk/files/tanec3.mp4)
+- [most advanced](https://kempelen.dai.fmph.uniba.sk/files/tanec4.mp4)
+
 ## Localization mat
 
 See [floor/floor_new_merged.png](https://kempelen.dai.fmph.uniba.sk/files/floor/)
