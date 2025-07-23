@@ -1,0 +1,162 @@
+number_of_performances = 4
+
+# ------ next performance start -------
+
+# TIME[ms] INSTRUCTION ARGUMENTS
+
+1000 LEDS OFF
+5000 LEDS ON
+12000 TAKEOFF
+
+# fly args: <pitch> <roll> <yaw> <altitude> <altitude_mode> <rollpitch_mode>      <yaw_mode>     <rollpitch_system>
+#            float   float float    float    ALT_m/ALT_velo RP_deg/RP_velo/RP_pos Y_deg/Y_velo   Ground/Body
+
+# pos args:  <x:float>  <y:float>  <z:float>  <yaw:float>
+
+18000  FLY   0.0     0.0    0.0   1.7        ALT_m               RP_deg                Y_velo          Body
+24000  POS   0.5        0.5        1.8        1.7
+34000  POS  -0.5        0.5        1.8        3.14
+44000  POS  -0.5       -0.5        1.8        4.84
+54000  POS   0.5       -0.5        1.8        0.0
+64000  POS   0.5        0.5        1.8        1.7
+
+74000  POS   0.5        0.5        1.8        0.0
+84000  POS   0.5        0.5        1.8        4.84
+
+94000  FLY   0.0     0.0    0.0   1.7        ALT_m            RP_deg               Y_velo          Body
+
+99000  LAND
+109000  END
+
+# ------ performance end -------
+
+# ------ next performance start -------
+
+# TIME[ms] INSTRUCTION ARGUMENTS
+
+1000 LEDS OFF
+5000 LEDS ON
+12000 TAKEOFF
+
+##################################
+PROCEDURE SPIRAL_UP
+0  FLY   0.05    0.0    30    0.2        ALT_velo            RP_velo               Y_velo          Body
+6000  FLY   0.0     0.0    0.0   2.5        ALT_m               RP_deg                Y_velo          Body
+ENDP
+##################################
+
+##################################
+PROCEDURE SPIRAL_DOWN
+0  FLY   0.05    0.0    30   -0.2        ALT_velo            RP_velo               Y_velo          Body
+6000  FLY   0.0     0.0    0.0   1.5        ALT_m               RP_deg                Y_velo          Body
+ENDP
+##################################
+
+# fly args: <pitch> <roll> <yaw> <altitude> <altitude_mode> <rollpitch_mode>      <yaw_mode>     <rollpitch_system>
+#            float   float float    float    ALT_m/ALT_velo RP_deg/RP_velo/RP_pos Y_deg/Y_velo   Ground/Body
+
+# pos args:  <x:float>  <y:float>  <z:float>  <yaw:float>
+
+18000  FLY   0.0     0.0    0.0   1.5        ALT_m               RP_deg                Y_velo          Body
+24000  RUN SPIRAL_UP
+35000  RUN SPIRAL_DOWN
+
+46000  LAND
+56000  END
+
+# ------ performance end -------
+
+# ------ next performance start -------
+
+# TIME[ms] INSTRUCTION ARGUMENTS
+
+1000 LEDS OFF
+5000 LEDS ON
+12000 TAKEOFF
+
+
+# fly args: <pitch> <roll> <yaw> <altitude> <altitude_mode> <rollpitch_mode>      <yaw_mode>     <rollpitch_system>
+#            float   float float    float    ALT_m/ALT_velo RP_deg/RP_velo/RP_pos Y_deg/Y_velo   Ground/Body
+
+# pos args:  <x:float>  <y:float>  <z:float>  <yaw:float>
+
+18000  FLY   0.0     0.0    0.0   1.7        ALT_m            RP_velo               Y_velo          Body
+
+24000 FLY   -0.2   -0.2    0.0   0.0       ALT_velo           RP_velo               Y_velo          Body
+27000 FLY   0.2     0.2    0.0   0.0        ALT_velo           RP_velo               Y_velo          Body
+30000 FLY   -0.2    -0.2   0.0   0.0       ALT_velo           RP_velo               Y_velo          Body
+33000 FLY   0.2     0.2    0.0   0.0        ALT_velo           RP_velo               Y_velo          Body
+
+36000 FLY   -0.2    0.2    0.0   0.0        ALT_velo            RP_velo               Y_velo          Body
+39000 FLY   0.2     -0.2   0.0   0.0        ALT_velo            RP_velo               Y_velo          Body
+42000 FLY   -0.2    0.2    0.0   0.0        ALT_velo            RP_velo               Y_velo          Body
+45000 FLY   0.2     -0.2   0.0   0.0        ALT_velo            RP_velo               Y_velo          Body
+
+48000  LAND
+58000  END
+
+# ------ performance end -------
+
+# ------ performance start -------
+
+# TIME[ms] INSTRUCTION ARGUMENTS
+
+1000 LEDS OFF
+5000 LEDS ON
+9000 LEDS OFF
+12000 TAKEOFF
+
+# fly args: <pitch> <roll> <yaw> <altitude> <altitude_mode> <rollpitch_mode>      <yaw_mode>     <rollpitch_system>
+#            float   float float    float    ALT_m/ALT_velo RP_deg/RP_velo/RP_pos Y_deg/Y_velo   Ground/Body
+
+19000  FLY   0.0     0.0    0.0   1.2        ALT_m               RP_deg                Y_velo          Body
+22800 FLY   0.0     0.0    0.0   1.0        ALT_velo             RP_deg                Y_velo          Body
+25300 FLY   0.0     0.0    0.0   -1.0       ALT_velo             RP_deg                Y_velo          Body
+27800 FLY   0.0     0.0    0.0   1.0        ALT_velo             RP_deg                Y_velo          Body
+30300 FLY   0.0     0.0    0.0   -1.0        ALT_velo             RP_deg                Y_velo          Body
+31800 FLY   0.0     0.0    0.0   1.5        ALT_velo             RP_deg                Y_velo          Body
+33300 FLY   0.0     0.0    0.0   -1.5        ALT_velo             RP_deg                Y_velo          Body
+35000 FLY   0.0     0.0    0.0   1.5        ALT_velo             RP_deg                Y_velo          Body
+36500 FLY   0.0     0.0    0.0   -1.5        ALT_velo             RP_deg                Y_velo          Body
+38100 FLY   0.0     0.0    0.0   2.0        ALT_velo             RP_deg                Y_velo          Body
+38800 FLY   0.0     0.0    0.0   -2.0        ALT_velo             RP_deg                Y_velo          Body
+39600 FLY   0.0     0.0    0.0   2.0        ALT_velo             RP_deg                Y_velo          Body
+40300 FLY   0.0     0.0    0.0   -2.0        ALT_velo             RP_deg                Y_velo          Body
+41100 FLY   0.0     0.0    0.0   2.0        ALT_velo             RP_deg                Y_velo          Body
+41300 FLY   0.0     0.0    0.0   1.5        ALT_m                RP_deg                Y_velo          Body
+
+######## part 02   + 23000
+
+
+45000 FLY    0.0   -2.0   0.0    0.0        ALT_velo          RP_deg                Y_velo          Body
+48000 FLY    0.0   0.0   0.0    0.0        ALT_velo          RP_deg                Y_velo          Body
+49000 FLY    0.0   2.0   0.0    0.0        ALT_velo          RP_deg                Y_velo          Body
+51000 FLY    0.0   0.0   0.0    0.0        ALT_velo          RP_deg                Y_velo          Body
+52000 FLY    0.0   -2.0   0.0    0.0        ALT_velo          RP_deg                Y_velo          Body
+54000 FLY    0.0   0.0   0.0    0.0        ALT_velo          RP_deg                Y_velo          Body
+55000 FLY    0.0   2.0   0.0    0.0        ALT_velo          RP_deg                Y_velo          Body
+57000 FLY    0.0   0.0   0.0    0.0        ALT_velo          RP_deg                Y_velo          Body
+58000 FLY    -2.0  0.0  0.0    0.0        ALT_velo          RP_deg                Y_velo          Body
+60000 FLY    0.0   0.0   0.0    0.0        ALT_velo          RP_deg                Y_velo          Body
+61000 FLY    2.0   0.0   0.0    0.0        ALT_velo          RP_deg                Y_velo          Body
+63000 FLY    0.0   0.0   0.0    0.0        ALT_velo          RP_deg                Y_velo          Body
+64000 FLY    -2.0   0.0   0.0    0.0        ALT_velo          RP_deg                Y_velo          Body
+66000 FLY    0.0   0.0   0.0    0.0        ALT_velo          RP_deg                Y_velo          Body
+67000 FLY    2.0   0.0   0.0    0.0        ALT_velo          RP_deg                Y_velo          Body
+69000 FLY    0.0   0.0   0.0    0.0        ALT_velo          RP_deg                Y_velo          Body
+
+######## part 03  + 54000
+
+72300 FLY  0.0     0.0    0.0   1.5        ALT_m                RP_deg                Y_velo          Body
+75000 FLY  0.0     0.0     30    0.5         ALT_velo            RP_velo               Y_velo          Body
+79000 FLY  0.0     0.0     -20   -0.5         ALT_velo            RP_velo               Y_velo          Body
+83000 FLY  0.0     0.0     60    0.5         ALT_velo            RP_velo               Y_velo          Body
+87000 FLY  0.0     0.0     -50   -0.5         ALT_velo            RP_velo               Y_velo          Body
+91000 FLY  0.0     0.0    120    0.5         ALT_velo            RP_velo               Y_velo          Body
+95000 FLY  0.0     0.0    -100   -0.5         ALT_velo            RP_velo               Y_velo          Body
+99000 FLY   0.0     0.0    0.0   1.5        ALT_m                RP_deg                Y_velo          Ground
+
+102000 LAND
+112000 END
+
+# ------ performance end -------

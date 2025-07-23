@@ -1,0 +1,4 @@
+rootProject.name = "Krucena"
+include ':app'
+include ':openCVLibrary'
+include ':android-sdk-v5-uxsdk'

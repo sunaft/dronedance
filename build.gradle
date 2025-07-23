@@ -1,0 +1,45 @@
+apply from:rootProject.file('dependencies.gradle')
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url 'https://plugins.gradle.org/m2/' }
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+    }
+    dependencies {
+        // Android Gradle Plugin
+        classpath 'com.android.tools.build:gradle:8.6.1'
+
+        //Kotlin，UXSDK
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$KOTLIN_VERSION" //DJI MSDK
+        // ... (remaining code)
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url REPO_MAVEN2
+        }
+        google()
+        jcenter()
+        mavenCentral()
+        maven {
+            url KOTLIN_MAVEN
+        }
+        maven { url JITPACK_MAVEN_URL }
+        repositories {
+            flatDir {
+                dirs new File(rootProject.projectDir.getAbsolutePath() + '/libs')
+            }
+        }
+    }
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

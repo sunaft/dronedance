@@ -1,0 +1,30 @@
+# the first line should always contain the number of performances defined in this file
+
+number_of_performances = 1
+
+# ------ first performance start -------
+
+# TIME[ms] INSTRUCTION ARGUMENTS
+
+1000 LEDS OFF
+2000 TAKEOFF
+
+# fly args: <pitch> <roll> <yaw> <altitude> <altitude_mode> <rollpitch_mode>      <yaw_mode>     <rollpitch_system>
+#            float   float float    float    ALT_m/ALT_velo RP_deg/RP_velo/RP_pos Y_deg/Y_velo   Ground/Body
+
+7000 FLY   0.0     0.0    75.0   1.5        ALT_m             RP_deg                Y_deg          Ground
+11000 LEDS ON
+12200 FLY   0.0     0.0    75.0   1.0        ALT_velo             RP_deg                Y_deg          Ground
+14700 LEDS OFF
+14700 FLY   0.0     0.0    75.0   -1.0       ALT_velo             RP_deg                Y_deg          Ground
+17200 FLY   0.0     0.0    75.0   1.0        ALT_velo             RP_deg                Y_deg          Ground
+19800 FLY   0.0     0.0    75.0   -1.0        ALT_velo             RP_deg                Y_deg          Ground
+22200 LEDS ON
+22200 FLY   0.0     0.0    75.0   1.0        ALT_velo             RP_deg                Y_deg          Ground
+24700 LEDS OFF
+24700 FLY   0.0     0.0    75.0   -1.0        ALT_velo             RP_deg                Y_deg          Ground
+27500 FLY   0.0     0.0    75.0   1.0        ALT_m                RP_deg                Y_deg          Ground
+30000 LAND
+40000 END
+
+# ------ first performance end -------

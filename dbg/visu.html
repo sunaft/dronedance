@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>VISU</title>
+</head>
+<body>
+<canvas id="cnv" width="1900" height="1100" style="background-color:#333">
+</canvas>
+<script>
+
+var c = document.getElementById("cnv");
+var ctx = c.getContext("2d");
+
+//blue: 789 562   1260 504    1306 968
+// red: 1048 771
+// green: 210 632    683 575
+// yellow: 467 843     1050 770
+//var coords = [[789, 562], [1260, 504], [1306, 968], [1048, 771], [210, 632], [683,575], [467, 843], [1050, 770] ];
+
+var coords = [
+[1164,713],
+[970,709],
+[1632,269],
+[527,248]
+];
+
+ctx.font = '14px Arial';
+for (var i = 0; i < coords.length; i++)
+{
+   ctx.fillStyle="#D0A0A0";
+   console.log(coords[i][0]);
+   ctx.beginPath();
+   ctx.ellipse(coords[i][0], coords[i][1] + 40, 12, 12, 0, 0, 2 * Math.PI); // (x, y, radiusX, radiusY, rotation, startAngle, endAngle)
+   ctx.fill();
+   ctx.fillStyle="#105010";
+   ctx.fillText(i, coords[i][0] - 5, coords[i][1] + 45);
+}
+</script>
+</body>
+</html>
