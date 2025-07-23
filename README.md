@@ -12,6 +12,9 @@ Limited range - the mat must always remain visible to the drone's downward-facin
 - [fairy tale](https://kempelen.dai.fmph.uniba.sk/files/tanec3.mp4)
 - [most advanced](https://kempelen.dai.fmph.uniba.sk/files/tanec4.mp4)
 
+They are with H.265 codec that probably only Chrome browser can play.
+
+
 ## Localization mat
 
 See [floor/floor_new_merged.png](https://kempelen.dai.fmph.uniba.sk/files/floor/)
