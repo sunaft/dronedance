@@ -33,7 +33,7 @@ control, you need to copy the config and dance files. From command prompt:
 adb push config.txt /data/local/tmp/
 adb shell "run-as sk.uniba.krucena cp /data/local/tmp/config.txt files/"
 
-adb push dance_0.txt /data/local/tmp/
+adb push dance_K.txt /data/local/tmp/
 adb shell "run-as sk.uniba.krucena cp /data/local/tmp/dance_K.txt files/"   - where K is each drone's number 1..6 (dances with 4 drones use 1,2,5,6).
 ```
 
