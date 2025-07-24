@@ -46,7 +46,8 @@ You also will need to confirm all the pop-up dialogs about permissions, etc.
 When the app starts, press `[Config]` button, and calibrate each color - while holding 
 the drone by hand above the mat so that the selected color is detected properly.
 If you do not see `[Config]` button, only view from drone's camera, it probably means
-you did not manage to copy the config files. Your remote control needs to be already
+you did not manage to copy the config files (or `drone_idi` is set to `K` and 
+`files/dance_K.txt` is missing). Your remote control needs to be already
 bound to the drone using the standard DJI Fly app, logged in, updates downloaded, if
 they are available. Whenever something is not working, check with official DJI Fly app
 first to see if connection with the drone is working there.
@@ -56,8 +57,8 @@ only regions showing WHITE represent black. It's okay if blue or other colors ap
 while tuning black detection, but they must not appear WHITE. Always test from various
 heights and angles since the illumination will be different in different locations. Some
 imperfections (e.g. unavoidable reflections) are acceptable. They will decrease the
-localization reliability, but there is redundance - especially when you fly high enough
-- flying lower than 1.6 m may always be unreliable. Ideal range is probably 1.7 - 5 m
+localization reliability, but there is redundance - especially when you fly high enough.
+Flying lower than 1.6 m may always be unreliable. Ideal range is probably 1.7 - 5 m
 (our room was limited to 3.6 m high),
 
 In the bottom options of the config, it is important to specify how many drones fly - only 
@@ -82,16 +83,18 @@ the same Wifi that does not block their mutual TCP communication.
 
 You can use VLC on any machine in local network to play music (such as to speakers) 
 that will be started synchronized with the drone dance.  
-The VLC on that machine must be starting using the following command:
+The VLC on that machine must be started using the following command:
 
 ```
 vlc -I rc --rc-host 0.0.0.0:4212
 ```
 
 If you need to use different port, change it in `config.txt`, and also put the IP address of the 
-machine where VLC runs into `config.txt`)
-The music files must be named `tanecK.mp3`  (for K=1..6). 
-Also check that VLC plays them normally from GUI interface.
+machine where VLC runs into `config.txt`.
+The music files must be named `tanecK.mp3`  (for K=1..number_of_performances). 
+Also check that VLC plays them normally from GUI interface. If still in trouble, check connecting
+to VLC from putty (raw at port 4212) and issue commands `add tanecK.mp3`, `play`, check with
+`status` and `is_playing`.
 
 
 
@@ -105,7 +108,7 @@ We use both Java version for Kotlin code (for manipulation with OpenCV data stru
 and C++ version for C++ library that does the actual localization work and uses some OpenCV functions, 
 such as thresholding...
 
-But both are included in the same SDK package, so only download OpenCV Android SDK  `opencv.org/releases`
+But both are included in the same SDK package, so only download OpenCV Android SDK  [opencv.org/releases](https://opencv.org/releases)
 Look for a file named like: `OpenCV-android-sdk-<version>.zip`  (we used version 4.11.0)
 
 Unzip it and locate the folder `OpenCV-android-sdk/sdk/java/`
@@ -208,9 +211,7 @@ To go back to the debug version, undo the steps above.
 
 ## Other Info
 
-App's icon credits:
-
-[Vector image by VectorStock / Nasturzia](https://www.vectorstock.com/royalty-free-vector/decorative-folk-bird-on-blooming-tree-branch-vector-52826783)
+App's icon credits: [Vector image by VectorStock / Nasturzia](https://www.vectorstock.com/royalty-free-vector/decorative-folk-bird-on-blooming-tree-branch-vector-52826783)
 
 This software was created by transforming one of the original DJI MSDK v5 samples, some remaining unneeded files (in resources) are still there.
 It was created with a great help and endless patience of ChatGPT - big thanks!
