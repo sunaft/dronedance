@@ -43,12 +43,22 @@ will be for sure different than mine and my attempts to do this automatically fa
 
 You also will need to confirm all the pop-up dialogs about permissions, etc.
 
-Go to `[Config]`, and calibrate each color - while holding the drone by hand above the 
-mat so that the selected color is detected properly.
+When the app starts, press `[Config]` button, and calibrate each color - while holding 
+the drone by hand above the mat so that the selected color is detected properly.
+If you do not see `[Config]` button, only view from drone's camera, it probably means
+you did not manage to copy the config files. Your remote control needs to be already
+bound to the drone using the standard DJI Fly app, logged in, updates downloaded, if
+they are available. Whenever something is not working, check with official DJI Fly app
+first to see if connection with the drone is working there.
 Make sure yellow is not detected as red, that blue is not detected as black. Black 
 detection is composed of two (logical AND) phases, so 
-only regions showing WHITE represent black. It's okay if blue or other colors appear RED, 
-but they must not appear WHITE. 
+only regions showing WHITE represent black. It's okay if blue or other colors appear RED
+while tuning black detection, but they must not appear WHITE. Always test from various
+heights and angles since the illumination will be different in different locations. Some
+imperfections (e.g. unavoidable reflections) are acceptable. They will decrease the
+localization reliability, but there is redundance - especially when you fly high enough
+- flying lower than 1.6 m may always be unreliable. Ideal range is probably 1.7 - 5 m
+(our room was limited to 3.6 m high),
 
 In the bottom options of the config, it is important to specify how many drones fly - only 
 one of them should be "master". It is recommended to have all logs and drawing OFF, 
