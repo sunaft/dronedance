@@ -35,10 +35,10 @@ jobs:
         mkdir -p app/opencv
         cp -r OpenCV-android-sdk/sdk/* app/opencv/
         echo "Top-level folders after copy:"
-        echo "openCVLibrary:"
-        ls -1 openCVLibrary
-        echo "app/opencv:"
-        ls -1 app/opencv
+        echo "LISTING: openCVLibrary:"
+        ls -la openCVLibrary
+        echo "LISTING: app/opencv:"
+        ls -la app/opencv
 
 
 
