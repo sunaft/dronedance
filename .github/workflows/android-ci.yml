@@ -39,6 +39,13 @@ jobs:
         ls -la openCVLibrary
         echo "LISTING: app/opencv:"
         ls -la app/opencv
+        
+        
+    - name: Copy OpenCV native libs
+      run: |
+        mkdir -p app/src/main/jniLibs
+        cp -r OpenCV-android-sdk/sdk/native/libs/* app/src/main/jniLibs/
+        ls -la app/src/main/jniLibs
 
 
     - name: Setup openCVLibrary build.gradle
@@ -69,6 +76,10 @@ jobs:
 
     - name: List Root Folder
       run: ls -lart /
+
+    - name: Clean project
+      run: ./gradlew clean
+
 
     - name: Make gradlew executable
       run: chmod +x gradlew
