@@ -26,17 +26,20 @@ jobs:
     - name: Inject API key into gradle.properties
       run: echo "AIRCRAFT_API_KEY=${{ secrets.AIRCRAFT_API_KEY }}" >> ~/.gradle/gradle.properties
 
-    - name: Download and unzip OpenCV Android SDK
+    - name: Download, unzip OpenCV SDK and list folders
       run: |
-        wget https://github.com/opencv/opencv/releases/download/4.11.0/opencv-4.11.0-android-sdk.zip
+    wget -q --show-progress https://github.com/opencv/opencv/releases/download/4.11.0/opencv-4.11.0-android-sdk.zip
         unzip -q opencv-4.11.0-android-sdk.zip
         mkdir -p openCVLibrary
-        # Copy only java folder contents into openCVLibrary/, preserving existing files like build.gradle
         cp -r OpenCV-android-sdk/sdk/java/* openCVLibrary/
-        # Copy entire sdk folder contents into app/opencv/
         mkdir -p app/opencv
         cp -r OpenCV-android-sdk/sdk/* app/opencv/
-    
+        echo "Top-level folders after copy:"
+        echo "openCVLibrary:"
+        ls -1 openCVLibrary
+        echo "app/opencv:"
+        ls -1 app/opencv
+
 
 
     - name: Make gradlew executable
