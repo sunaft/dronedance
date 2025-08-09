@@ -21,7 +21,8 @@ android {
     }
 
     kotlinOptions{
-        jvmTarget = JavaVersion.VERSION_1_8
+//        jvmTarget = JavaVersion.VERSION_1_8
+        jvmTarget = '17'
         freeCompilerArgs += ["-Xjvm-default=all"]
     }
 
