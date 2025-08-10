@@ -22,6 +22,11 @@ jobs:
 
     - name: Set up Gradle
       uses: gradle/gradle-build-action@v3
+    - name: Setup Gradle 8.14
+      uses: gradle/actions/setup-gradle@v4
+      with:
+        gradle-version: '8.14' # Quotes required to prevent YAML converting to number
+
 
     - name: Inject API key into gradle.properties
       run: echo "AIRCRAFT_API_KEY=${{ secrets.AIRCRAFT_API_KEY }}" >> ~/.gradle/gradle.properties
@@ -86,3 +91,5 @@ jobs:
 
     - name: Build Android app
       run: ./gradlew assembleDebug
+#   - name: Build with Gradle 8.14
+#     run: gradle build
